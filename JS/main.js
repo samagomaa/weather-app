@@ -29,6 +29,28 @@ async function getWeatherData(cityName)
     
 }
 
+async function getUserIp(){
+    fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    getIpInfo (data.ip)
+  })
+  .catch((error) => {
+    console.error('Error fetching IP address:', error)
+    startApp()
+});
+}
+getUserIp()
+
+async function getIpInfo (data){
+    const ip = `${data}`;
+    const accessKey = '6a758302-852b-432a-ba4b-e5fedd90efc7';
+    const url = 'https://apiip.net/api/check?ip='+ ip +'&accessKey='+ accessKey; 
+    const response = await fetch(url);
+    const result = await response.json();
+    console.log(result.city);
+    startApp(result.city)
+  };
 
 function displayTodayData(data) {
     let todayData = new Date()
@@ -68,7 +90,7 @@ async function startApp(city="cairo")
     }
     
 }
-//use if statement and check the readyState
+
 startApp()
 
 searchInput.addEventListener("input" , function() {
