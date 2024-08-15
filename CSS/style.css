@@ -1,0 +1,143 @@
+body{
+    background-color: #1e202b;
+}
+.navbar{
+    background-color: #1e202b;
+}
+.navbar a{
+    color: #fff !important;
+}
+.nav-brand-text{
+    font-size: 10px;
+    color: darkgray;
+}
+.navbar li.nav-item a.active span{
+    color: #009ad8 !important;
+    border: 2px solid #009ad8;
+}
+.navbar li.nav-item a span{
+    font-size: 15px;
+    padding: 2px 20px !important;
+    border: 2px solid rgb(33 37 41);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.navbar li.nav-item:hover a span{
+    border: 2px solid #009ad8;
+    color: #009ad8 !important;
+}
+.navbar-toggler{
+    padding: 15px 10px;
+    border-radius: 25px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 3px solid #009ad8 !important;
+    border-radius: 25px;
+    padding: 15px 10px;
+    transition: all 0.3s;
+}
+.navbar-toggler:hover{
+    outline: 3px solid #009ad8 !important;
+    border-radius: 25px;
+    padding: 15px 10px;
+}
+/* collapse Navbar */
+.collUl{
+    background-color: rgb(38, 41, 54);
+}
+.navbar li.nav-item a.active.collItem{
+    font-size: 20px;
+    color: #009ad8 !important;
+}
+.navbar li.nav-item:hover a.collItem,
+.next_condition_text{
+    color: #009ad8 !important;
+}
+.content-section{
+    height: 100vh;
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+}
+input.searchBar{
+    background-color: #1e202b !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 25px;
+    padding-right: 150px;  /* to avoid the button overlapping the text */
+}
+input.searchBar::placeholder{
+    color: darkgray !important;
+    font-size: 15px;
+}
+button.searchButton{
+    padding: 5px 40px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    color: #fff !important;
+    background-color: #009ad8 !important;
+    z-index: 100 !important;
+}
+.todayCard{
+    background-color: rgba(0, 0, 0, 0.121);
+    width: 100%;
+    color: #bfc1c8;
+}
+.statuCard{
+    background-color: #323544;
+}
+#today_city,
+.minTempColor{
+    font-weight: 500;
+    color: #bfc1c8;
+}
+.cardDegree span{
+    font-size: 90px;
+    color: #fff;
+}
+#today_condition{
+    color: #009ad8;
+}
+
+.statuCard2{
+    background-color: #252735;
+}
+.contact li{
+    list-style-type: none;
+}
+.contentSection{
+    background-color: #323544;
+}
+.contactIcon{
+    background-color:#1e202b ;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    color: #009ad8;
+}
+.cardIcons
+{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 576px) {
+    .fristCard{
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 1rem !important;
+    }
+    .todayCard{
+        border-top-right-radius: 1rem !important;
+    }
+    .lastCard{
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 1rem !important;
+    }
+    .socialIcons{
+        padding-left: 0px !important;
+        padding-right: 50% !important;
+        padding-top: 30px !important;
+    }
+}
