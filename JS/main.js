@@ -10,7 +10,7 @@ let humidity             = document.getElementById("humidity")
 let wind                 = document.getElementById("wind")
 let wind_direction       = document.getElementById("wind_direction")
 let searchInput          = document.getElementById("searchInput")
-
+let buttonSearch         = document.getElementById("buttonSearch")
 
 //Tomorrow Variables
 let nextDay_name                = document.getElementsByClassName("nextDay_name")
@@ -94,6 +94,10 @@ async function startApp(city="cairo")
 startApp()
 
 searchInput.addEventListener("input" , function() {
+    startApp(searchInput.value)
+})
+
+buttonSearch.addEventListener("click" , function() {
     startApp(searchInput.value)
 })
 
